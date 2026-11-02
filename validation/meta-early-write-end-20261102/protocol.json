@@ -1,0 +1,50 @@
+{
+  "ballast_bytes": 6493814784,
+  "source_peak_pss_bytes": {
+    "cpu": [
+      8370131968,
+      8238120960,
+      8378591232,
+      8368728064,
+      8381387776
+    ],
+    "meta": [
+      1930775552,
+      1871276032,
+      1950861312,
+      1783139328,
+      1876317184
+    ]
+  },
+  "derivation": "page-rounded difference of prior five-run median peak PSS",
+  "sample_interval_ms": 50,
+  "clock": "absolute perf_counter_ns plus realtime_ns",
+  "order": [
+    [
+      "cpu",
+      "meta",
+      "meta-ballast"
+    ],
+    [
+      "meta",
+      "meta-ballast",
+      "cpu"
+    ],
+    [
+      "meta-ballast",
+      "cpu",
+      "meta"
+    ]
+  ],
+  "kernel": "5.15.120.bsk.3-amd64",
+  "ext4_options": "rw\nbsddf\nnogrpid\nblock_validity\ndioread_nolock\nnodiscard\ndelalloc\nnowarn_on_error\njournal_checksum\nbarrier\nauto_da_alloc\nuser_xattr\nacl\nnoquota\nresuid=0\nresgid=0\nerrors=continue\ncommit=5\nmin_batch_time=0\nmax_batch_time=15000\nstripe=0\ndata=ordered\ninode_readahead_blks=32\ninit_itable=10\nmax_dir_size_kb=0\n",
+  "vm_settings": {
+    "dirty_ratio": "20",
+    "dirty_background_ratio": "10",
+    "dirty_writeback_centisecs": "500",
+    "dirty_expire_centisecs": "3000",
+    "dirty_bytes": "0",
+    "dirty_background_bytes": "0"
+  },
+  "meminfo_before": "MemTotal:       32612656 kB\nMemFree:        13638120 kB\nMemAvailable:   29664916 kB\nBuffers:          576100 kB\nCached:         15143984 kB\nSwapCached:            0 kB\nActive:         10771492 kB\nInactive:        6979228 kB\nActive(anon):       2160 kB\nInactive(anon):  2030316 kB\nActive(file):   10769332 kB\nInactive(file):  4948912 kB\nUnevictable:       16200 kB\nMlocked:           14664 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                20 kB\nWriteback:             0 kB\nAnonPages:       2044632 kB\nMapped:           728348 kB\nShmem:              3440 kB\nKReclaimable:     772752 kB\nSlab:             930952 kB\nSReclaimable:     772752 kB\nSUnreclaim:       158200 kB\nKernelStack:       13936 kB\nPageTables:        33108 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    16306328 kB\nCommitted_AS:    7059844 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       95680 kB\nVmallocChunk:          0 kB\nPercpu:             7808 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:      4096 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    17581928 kB\nDirectMap2M:    15972352 kB\nDirectMap1G:     2097152 kB\n"
+}

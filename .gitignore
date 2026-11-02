@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+checkpoints/
+*.distcp
+*.safetensors
+*.pt
+*.pth
+*.bin
+.plot-cache/
+.t/

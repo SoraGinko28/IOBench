@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "cells": 6,
+  "writes": 18,
+  "loads": 24,
+  "logical_tensor_hash_checks": 7632,
+  "unique_file_rows": 32,
+  "file_hashes": 96,
+  "metadata_differences_only_in_proven_uuid_spans": true,
+  "all_data_files_raw_identical": true,
+  "all_normalized_hashes_identical": true,
+  "logical_hashes_match_generated_and_across_ranks": true,
+  "checkpoint_directories_remaining": 0,
+  "targeted_helper_tests": 3,
+  "tiny_two_rank_smoke": "passed",
+  "ruff": "passed",
+  "checked": "2026-10-30T14:21:05.641310+00:00"
+}

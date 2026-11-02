@@ -1,0 +1,1875 @@
+{
+  "normalized_identical": true,
+  "across_rank_logical_hashes_match": true,
+  "cells": [
+    {
+      "model": "1b",
+      "ranks": 1,
+      "comparisons": {
+        "native_a_vs_native_b": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 64725,
+                  "end": 64733,
+                  "left_hex": "6634353332636266",
+                  "right_hex": "6436666235656438",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64734,
+                  "end": 64738,
+                  "left_hex": "38633139",
+                  "right_hex": "39313861",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64740,
+                  "end": 64743,
+                  "left_hex": "336664",
+                  "right_hex": "376138",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64745,
+                  "end": 64748,
+                  "left_hex": "376261",
+                  "right_hex": "616133",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64750,
+                  "end": 64761,
+                  "left_hex": "6335613464663636633032",
+                  "right_hex": "3466623337356564363335",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "f4532cbf-8c19-43fd-87ba-bc5a4df66c02",
+              "right": "d6fb5ed8-918a-47a8-8aa3-b4fb375ed635"
+            }
+          ],
+          "raw_identical_count": 1,
+          "normalized_identical": true
+        },
+        "native_a_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 64725,
+                  "end": 64733,
+                  "left_hex": "6634353332636266",
+                  "right_hex": "3831643262623130",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64734,
+                  "end": 64738,
+                  "left_hex": "38633139",
+                  "right_hex": "30333233",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64740,
+                  "end": 64743,
+                  "left_hex": "336664",
+                  "right_hex": "306232",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64744,
+                  "end": 64748,
+                  "left_hex": "38376261",
+                  "right_hex": "61383932",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64749,
+                  "end": 64761,
+                  "left_hex": "626335613464663636633032",
+                  "right_hex": "386437393731343863383737",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "f4532cbf-8c19-43fd-87ba-bc5a4df66c02",
+              "right": "81d2bb10-0323-40b2-a892-8d797148c877"
+            }
+          ],
+          "raw_identical_count": 1,
+          "normalized_identical": true
+        },
+        "native_b_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 64725,
+                  "end": 64733,
+                  "left_hex": "6436666235656438",
+                  "right_hex": "3831643262623130",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64734,
+                  "end": 64738,
+                  "left_hex": "39313861",
+                  "right_hex": "30333233",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64740,
+                  "end": 64743,
+                  "left_hex": "376138",
+                  "right_hex": "306232",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64744,
+                  "end": 64748,
+                  "left_hex": "38616133",
+                  "right_hex": "61383932",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 64749,
+                  "end": 64761,
+                  "left_hex": "623466623337356564363335",
+                  "right_hex": "386437393731343863383737",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "d6fb5ed8-918a-47a8-8aa3-b4fb375ed635",
+              "right": "81d2bb10-0323-40b2-a892-8d797148c877"
+            }
+          ],
+          "raw_identical_count": 1,
+          "normalized_identical": true
+        }
+      },
+      "logical_hashes_match": true
+    },
+    {
+      "model": "1b",
+      "ranks": 4,
+      "comparisons": {
+        "native_a_vs_native_b": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 176564,
+                  "end": 176572,
+                  "left_hex": "3930626435356565",
+                  "right_hex": "6233336361363333",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176573,
+                  "end": 176577,
+                  "left_hex": "33316136",
+                  "right_hex": "65366635",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176579,
+                  "end": 176582,
+                  "left_hex": "363735",
+                  "right_hex": "303238",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176583,
+                  "end": 176587,
+                  "left_hex": "39353932",
+                  "right_hex": "62303338",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176588,
+                  "end": 176600,
+                  "left_hex": "333139656334633230366465",
+                  "right_hex": "616130633533383166633466",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "90bd55ee-31a6-4675-9592-319ec4c206de",
+              "right": "b33ca633-e6f5-4028-b038-aa0c5381fc4f"
+            }
+          ],
+          "raw_identical_count": 4,
+          "normalized_identical": true
+        },
+        "native_a_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 176564,
+                  "end": 176566,
+                  "left_hex": "3930",
+                  "right_hex": "3563",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176567,
+                  "end": 176572,
+                  "left_hex": "6435356565",
+                  "right_hex": "6634633662",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176573,
+                  "end": 176577,
+                  "left_hex": "33316136",
+                  "right_hex": "64666632",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176579,
+                  "end": 176582,
+                  "left_hex": "363735",
+                  "right_hex": "333466",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176583,
+                  "end": 176587,
+                  "left_hex": "39353932",
+                  "right_hex": "61333163",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176588,
+                  "end": 176600,
+                  "left_hex": "333139656334633230366465",
+                  "right_hex": "663461666136353433303562",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "90bd55ee-31a6-4675-9592-319ec4c206de",
+              "right": "5cbf4c6b-dff2-434f-a31c-f4afa654305b"
+            }
+          ],
+          "raw_identical_count": 4,
+          "normalized_identical": true
+        },
+        "native_b_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 176564,
+                  "end": 176572,
+                  "left_hex": "6233336361363333",
+                  "right_hex": "3563626634633662",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176573,
+                  "end": 176575,
+                  "left_hex": "6536",
+                  "right_hex": "6466",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176576,
+                  "end": 176577,
+                  "left_hex": "35",
+                  "right_hex": "32",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176579,
+                  "end": 176582,
+                  "left_hex": "303238",
+                  "right_hex": "333466",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176583,
+                  "end": 176587,
+                  "left_hex": "62303338",
+                  "right_hex": "61333163",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 176588,
+                  "end": 176600,
+                  "left_hex": "616130633533383166633466",
+                  "right_hex": "663461666136353433303562",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "b33ca633-e6f5-4028-b038-aa0c5381fc4f",
+              "right": "5cbf4c6b-dff2-434f-a31c-f4afa654305b"
+            }
+          ],
+          "raw_identical_count": 4,
+          "normalized_identical": true
+        }
+      },
+      "logical_hashes_match": true
+    },
+    {
+      "model": "1b",
+      "ranks": 8,
+      "comparisons": {
+        "native_a_vs_native_b": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 314208,
+                  "end": 314216,
+                  "left_hex": "6534613739633837",
+                  "right_hex": "3965643630313634",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314217,
+                  "end": 314220,
+                  "left_hex": "643236",
+                  "right_hex": "616362",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314223,
+                  "end": 314224,
+                  "left_hex": "35",
+                  "right_hex": "62",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314225,
+                  "end": 314226,
+                  "left_hex": "30",
+                  "right_hex": "65",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314227,
+                  "end": 314231,
+                  "left_hex": "61633038",
+                  "right_hex": "62386666",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314232,
+                  "end": 314239,
+                  "left_hex": "34353632313064",
+                  "right_hex": "36636361323161",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314240,
+                  "end": 314244,
+                  "left_hex": "38366135",
+                  "right_hex": "61646666",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__4_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__5_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__6_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__7_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "e4a79c87-d26f-45a0-ac08-456210d286a5",
+              "right": "9ed60164-acbf-4bae-b8ff-6cca21a2adff"
+            }
+          ],
+          "raw_identical_count": 8,
+          "normalized_identical": true
+        },
+        "native_a_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 314208,
+                  "end": 314216,
+                  "left_hex": "6534613739633837",
+                  "right_hex": "3531663461353261",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314217,
+                  "end": 314221,
+                  "left_hex": "64323666",
+                  "right_hex": "63383162",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314223,
+                  "end": 314225,
+                  "left_hex": "3561",
+                  "right_hex": "6436",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314227,
+                  "end": 314231,
+                  "left_hex": "61633038",
+                  "right_hex": "62343166",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314232,
+                  "end": 314244,
+                  "left_hex": "343536323130643238366135",
+                  "right_hex": "393163643832636339306630",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__4_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__5_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__6_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__7_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "e4a79c87-d26f-45a0-ac08-456210d286a5",
+              "right": "51f4a52a-c81b-4d60-b41f-91cd82cc90f0"
+            }
+          ],
+          "raw_identical_count": 8,
+          "normalized_identical": true
+        },
+        "native_b_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 314208,
+                  "end": 314216,
+                  "left_hex": "3965643630313634",
+                  "right_hex": "3531663461353261",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314217,
+                  "end": 314221,
+                  "left_hex": "61636266",
+                  "right_hex": "63383162",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314223,
+                  "end": 314226,
+                  "left_hex": "626165",
+                  "right_hex": "643630",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314228,
+                  "end": 314230,
+                  "left_hex": "3866",
+                  "right_hex": "3431",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314232,
+                  "end": 314234,
+                  "left_hex": "3663",
+                  "right_hex": "3931",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314235,
+                  "end": 314242,
+                  "left_hex": "61323161326164",
+                  "right_hex": "64383263633930",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 314243,
+                  "end": 314244,
+                  "left_hex": "66",
+                  "right_hex": "30",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__4_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__5_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__6_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__7_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "9ed60164-acbf-4bae-b8ff-6cca21a2adff",
+              "right": "51f4a52a-c81b-4d60-b41f-91cd82cc90f0"
+            }
+          ],
+          "raw_identical_count": 8,
+          "normalized_identical": true
+        }
+      },
+      "logical_hashes_match": true
+    },
+    {
+      "model": "3b",
+      "ranks": 1,
+      "comparisons": {
+        "native_a_vs_native_b": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 138895,
+                  "end": 138903,
+                  "left_hex": "6539356262336165",
+                  "right_hex": "3261393735353837",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138904,
+                  "end": 138908,
+                  "left_hex": "65633737",
+                  "right_hex": "34643664",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138910,
+                  "end": 138913,
+                  "left_hex": "656364",
+                  "right_hex": "373531",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138914,
+                  "end": 138918,
+                  "left_hex": "62643533",
+                  "right_hex": "61353432",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138919,
+                  "end": 138931,
+                  "left_hex": "636136623766396562626337",
+                  "right_hex": "343635316365656138663739",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "e95bb3ae-ec77-4ecd-bd53-ca6b7f9ebbc7",
+              "right": "2a975587-4d6d-4751-a542-4651ceea8f79"
+            }
+          ],
+          "raw_identical_count": 1,
+          "normalized_identical": true
+        },
+        "native_a_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 138895,
+                  "end": 138899,
+                  "left_hex": "65393562",
+                  "right_hex": "62636336",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138900,
+                  "end": 138903,
+                  "left_hex": "336165",
+                  "right_hex": "346561",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138904,
+                  "end": 138908,
+                  "left_hex": "65633737",
+                  "right_hex": "37616362",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138910,
+                  "end": 138913,
+                  "left_hex": "656364",
+                  "right_hex": "616137",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138914,
+                  "end": 138917,
+                  "left_hex": "626435",
+                  "right_hex": "386161",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138919,
+                  "end": 138925,
+                  "left_hex": "636136623766",
+                  "right_hex": "343364333839",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138926,
+                  "end": 138928,
+                  "left_hex": "6562",
+                  "right_hex": "6331",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138929,
+                  "end": 138931,
+                  "left_hex": "6337",
+                  "right_hex": "3466",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "e95bb3ae-ec77-4ecd-bd53-ca6b7f9ebbc7",
+              "right": "bcc6b4ea-7acb-4aa7-8aa3-43d3899c1b4f"
+            }
+          ],
+          "raw_identical_count": 1,
+          "normalized_identical": true
+        },
+        "native_b_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 138895,
+                  "end": 138903,
+                  "left_hex": "3261393735353837",
+                  "right_hex": "6263633662346561",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138904,
+                  "end": 138908,
+                  "left_hex": "34643664",
+                  "right_hex": "37616362",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138910,
+                  "end": 138913,
+                  "left_hex": "373531",
+                  "right_hex": "616137",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138914,
+                  "end": 138918,
+                  "left_hex": "61353432",
+                  "right_hex": "38616133",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 138920,
+                  "end": 138931,
+                  "left_hex": "3635316365656138663739",
+                  "right_hex": "3364333839396331623466",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "2a975587-4d6d-4751-a542-4651ceea8f79",
+              "right": "bcc6b4ea-7acb-4aa7-8aa3-43d3899c1b4f"
+            }
+          ],
+          "raw_identical_count": 1,
+          "normalized_identical": true
+        }
+      },
+      "logical_hashes_match": true
+    },
+    {
+      "model": "3b",
+      "ranks": 4,
+      "comparisons": {
+        "native_a_vs_native_b": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 377391,
+                  "end": 377399,
+                  "left_hex": "3566666337313038",
+                  "right_hex": "3632363333326237",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377400,
+                  "end": 377404,
+                  "left_hex": "36626634",
+                  "right_hex": "61323939",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377406,
+                  "end": 377409,
+                  "left_hex": "343337",
+                  "right_hex": "623231",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377410,
+                  "end": 377413,
+                  "left_hex": "623464",
+                  "right_hex": "613231",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377415,
+                  "end": 377427,
+                  "left_hex": "616238326464343932636430",
+                  "right_hex": "636132396234636363396565",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "5ffc7108-6bf4-4437-b4d7-ab82dd492cd0",
+              "right": "626332b7-a299-4b21-a217-ca29b4ccc9ee"
+            }
+          ],
+          "raw_identical_count": 4,
+          "normalized_identical": true
+        },
+        "native_a_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 377391,
+                  "end": 377399,
+                  "left_hex": "3566666337313038",
+                  "right_hex": "3139363436333935",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377400,
+                  "end": 377404,
+                  "left_hex": "36626634",
+                  "right_hex": "66613533",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377406,
+                  "end": 377408,
+                  "left_hex": "3433",
+                  "right_hex": "3738",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377410,
+                  "end": 377414,
+                  "left_hex": "62346437",
+                  "right_hex": "39363166",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377415,
+                  "end": 377427,
+                  "left_hex": "616238326464343932636430",
+                  "right_hex": "656534383435336534396365",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "5ffc7108-6bf4-4437-b4d7-ab82dd492cd0",
+              "right": "19646395-fa53-4787-961f-ee48453e49ce"
+            }
+          ],
+          "raw_identical_count": 4,
+          "normalized_identical": true
+        },
+        "native_b_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 377391,
+                  "end": 377393,
+                  "left_hex": "3632",
+                  "right_hex": "3139",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377394,
+                  "end": 377399,
+                  "left_hex": "3333326237",
+                  "right_hex": "3436333935",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377400,
+                  "end": 377404,
+                  "left_hex": "61323939",
+                  "right_hex": "66613533",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377406,
+                  "end": 377409,
+                  "left_hex": "623231",
+                  "right_hex": "373837",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377410,
+                  "end": 377412,
+                  "left_hex": "6132",
+                  "right_hex": "3936",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377413,
+                  "end": 377414,
+                  "left_hex": "37",
+                  "right_hex": "66",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377415,
+                  "end": 377424,
+                  "left_hex": "636132396234636363",
+                  "right_hex": "656534383435336534",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 377425,
+                  "end": 377426,
+                  "left_hex": "65",
+                  "right_hex": "63",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "626332b7-a299-4b21-a217-ca29b4ccc9ee",
+              "right": "19646395-fa53-4787-961f-ee48453e49ce"
+            }
+          ],
+          "raw_identical_count": 4,
+          "normalized_identical": true
+        }
+      },
+      "logical_hashes_match": true
+    },
+    {
+      "model": "3b",
+      "ranks": 8,
+      "comparisons": {
+        "native_a_vs_native_b": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 671576,
+                  "end": 671577,
+                  "left_hex": "37",
+                  "right_hex": "31",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671578,
+                  "end": 671584,
+                  "left_hex": "303431323133",
+                  "right_hex": "393237613235",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671585,
+                  "end": 671589,
+                  "left_hex": "31333263",
+                  "right_hex": "37633032",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671591,
+                  "end": 671594,
+                  "left_hex": "663136",
+                  "right_hex": "346133",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671596,
+                  "end": 671598,
+                  "left_hex": "6438",
+                  "right_hex": "6237",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671600,
+                  "end": 671605,
+                  "left_hex": "6534656431",
+                  "right_hex": "3933316534",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671606,
+                  "end": 671612,
+                  "left_hex": "313632393437",
+                  "right_hex": "656633353864",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__4_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__5_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__6_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__7_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "7b041213-132c-4f16-bd86-e4ed14162947",
+              "right": "1b927a25-7c02-44a3-bb76-931e44ef358d"
+            }
+          ],
+          "raw_identical_count": 8,
+          "normalized_identical": true
+        },
+        "native_a_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 671576,
+                  "end": 671577,
+                  "left_hex": "37",
+                  "right_hex": "63",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671578,
+                  "end": 671579,
+                  "left_hex": "30",
+                  "right_hex": "64",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671580,
+                  "end": 671584,
+                  "left_hex": "31323133",
+                  "right_hex": "64386162",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671585,
+                  "end": 671589,
+                  "left_hex": "31333263",
+                  "right_hex": "66346435",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671592,
+                  "end": 671594,
+                  "left_hex": "3136",
+                  "right_hex": "3338",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671595,
+                  "end": 671597,
+                  "left_hex": "6264",
+                  "right_hex": "3838",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671598,
+                  "end": 671599,
+                  "left_hex": "36",
+                  "right_hex": "62",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671600,
+                  "end": 671608,
+                  "left_hex": "6534656431343136",
+                  "right_hex": "3266303564313564",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671609,
+                  "end": 671612,
+                  "left_hex": "393437",
+                  "right_hex": "373061",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__4_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__5_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__6_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__7_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "7b041213-132c-4f16-bd86-e4ed14162947",
+              "right": "cbd4d8ab-f4d5-4f38-888b-2f05d15d270a"
+            }
+          ],
+          "raw_identical_count": 8,
+          "normalized_identical": true
+        },
+        "native_b_vs_gdtensor": {
+          "same_file_names": true,
+          "files": {
+            ".metadata": {
+              "raw_identical": false,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": [
+                {
+                  "start": 671576,
+                  "end": 671577,
+                  "left_hex": "31",
+                  "right_hex": "63",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671578,
+                  "end": 671584,
+                  "left_hex": "393237613235",
+                  "right_hex": "643464386162",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671585,
+                  "end": 671589,
+                  "left_hex": "37633032",
+                  "right_hex": "66346435",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671591,
+                  "end": 671594,
+                  "left_hex": "346133",
+                  "right_hex": "663338",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671595,
+                  "end": 671599,
+                  "left_hex": "62623736",
+                  "right_hex": "38383862",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                },
+                {
+                  "start": 671600,
+                  "end": 671612,
+                  "left_hex": "393331653434656633353864",
+                  "right_hex": "326630356431356432373061",
+                  "location": [
+                    "pickle: storage_meta.save_id"
+                  ]
+                }
+              ]
+            },
+            "__0_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__1_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__2_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__3_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__4_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__5_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__6_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            },
+            "__7_0.distcp": {
+              "raw_identical": true,
+              "normalized_identical": true,
+              "payloads_identical": true,
+              "byte_diffs": []
+            }
+          },
+          "metadata_field_diffs": [
+            {
+              "field": "storage_meta.save_id",
+              "left": "1b927a25-7c02-44a3-bb76-931e44ef358d",
+              "right": "cbd4d8ab-f4d5-4f38-888b-2f05d15d270a"
+            }
+          ],
+          "raw_identical_count": 8,
+          "normalized_identical": true
+        }
+      },
+      "logical_hashes_match": true
+    }
+  ]
+}

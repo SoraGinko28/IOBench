@@ -1,0 +1,2 @@
+# Keep archived evidence bytes intact, including CSV CRLF and generated plot whitespace.
+validation/** -text -whitespace

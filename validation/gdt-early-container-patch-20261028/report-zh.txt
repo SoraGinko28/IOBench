@@ -1,0 +1,63 @@
+每个 container 在 payload 完成后立即 patch：验证报告
+
+修改：metasl/gdt_storage.py 中 observe 收齐 slot 后调用幂等 _patch；commit 校验完整性、兜底空 slot，保留原有 flush/fsync。
+METASL_GDTENSOR_PATCH_TIMING=commit|eager，默认 eager；保留开关便于同一份代码复现旧时机和 A/B。
+无竞争：StorageAccessor.write_from_buffer 先同步完成所有 payload pwrite，才调用 observe；rank_save 的 _copy 串行遍历 ranges。writer 在创建 session 前已 flush 所有 envelope，payload 阶段没有 buffered writes。patch 使用独立的元数据偏移，且 _container_pwrite 仍先 flush，再 pwrite，不移动逻辑文件位置。
+container_patch 事件与 METASL_GDTENSOR_PATCH_DIAGNOSTICS 均保留，patch 算法未变。
+
+字节和加载：
+1B：Meta/CPU/GPU × commit/eager 六份 .distcp 全字节一致；2,200,413,745 B；SHA256=c080c2e197786acd394f816d4790f9e075bb2dc64ce5f167b2bb17cb966e365a。三份 eager 均通过原生 DCP（io_backend=dcp）加载，numerical_values_verified=true，加载前后全部 checkpoint 文件 SHA256 不变。
+3B：Meta/CPU/GPU × commit/eager 六份 .distcp 全字节一致；6,794,893,227 B；SHA256=d6f826f3b51de370f02fc488eb613683c84f045f2a34e4c65fc1f3e758c83cae。三份 eager 均通过原生 DCP（io_backend=dcp）加载，numerical_values_verified=true，加载前后全部 checkpoint 文件 SHA256 不变。
+精确口径：.metadata 原始 SHA256 随 checkpoint 路径及随机 save_id 改变；未把整个目录的原始 SHA256 宣称为相同。state_dict_metadata、storage_data、planner_data 逐项相等；各次原始 inventory 和 StorageMeta 已记录。
+
+请求序列与 patch 落点：
+1B commit：三设备的全部 .distcp 请求序列（按 start_ns 排序，含 seek/write、payload pwrite、patch pwrite，排除 request=false 生命周期事件）完全相同；请求数 50,095；payload 33,613 次；序列 SHA256=80d177689dcfcc28cd3370b6fbbb0b4377b4fd26cc60c4599932c440eebb81f2。
+1B eager：三设备的全部 .distcp 请求序列（按 start_ns 排序，含 seek/write、payload pwrite、patch pwrite，排除 request=false 生命周期事件）完全相同；请求数 50,095；payload 33,613 次；序列 SHA256=88d00abe93967242f90da065a0f028cbd960a74e6044df432a9a1e226e0639f0。
+  patch 例（第几个 container → 已完成 payload 请求数 / 后续 payload 请求数）：1 → 1 / 33,612；2 → 2 / 33,611；3 → 3 / 33,610；200 → 31,613 / 2,000；201 → 33,613 / 0
+3B commit：三设备的全部 .distcp 请求序列（按 start_ns 排序，含 seek/write、payload pwrite、patch pwrite，排除 request=false 生命周期事件）完全相同；请求数 139,515；payload 103,845 次；序列 SHA256=e0afbf8998f9321c208a6c5b7b27a5fb785a6cb5b95b19d22a247e465b8e1137。
+3B eager：三设备的全部 .distcp 请求序列（按 start_ns 排序，含 seek/write、payload pwrite、patch pwrite，排除 request=false 生命周期事件）完全相同；请求数 139,515；payload 103,845 次；序列 SHA256=85e3af169c3e7cc686088527c1338fc5e16186775535ed0ed22246d394cbf5f9。
+  patch 例（第几个 container → 已完成 payload 请求数 / 后续 payload 请求数）：1 → 1 / 103,844；2 → 2 / 103,843；3 → 3 / 103,842；434 → 94,349 / 9,496；435 → 103,845 / 0
+commit 中全部 patch 都在最后一次 payload 请求后；eager 中各组紧跟各自 slot 的最后一个 payload chunk，详细偏移、时间及落点见 identity-analysis.json 和 cases.json。
+7B 的 20 次测量均为 232,541 个 payload 请求、15,231,233,024 B、339 组/1,695 次 patch；每次前 338 组（1,690 次）均在后续 payload 请求之前，最后一组跟随最后一次 payload。全部 payload 序列一致。
+
+7B patch 总时间（每次保存求和，单位秒；旧 10 次 → 新 5 次）：
+位置/配置 | 中位数 旧→新 | 最大值 旧→新
+local/meta-sim-nt | 0.301334 → 0.007231 | 7.930917 → 0.007969
+local/cuda | 0.834957 → 0.006986 | 3.518027 → 0.007229
+nfs/meta-sim-nt | 7.299047 → 0.002703 | 14.184035 → 1.796005
+nfs/cuda | 11.031777 → 0.002537 | 14.048198 → 0.014640
+
+save 去 fsync 的离散度及 payload pwrite（单位秒）：
+位置/配置 | save IQR 旧→新 | save max−min 旧→新 | pwrite 中位数 旧→新（变化）
+local/meta-sim-nt | 1.346857 → 0.489780 | 8.241114 → 1.175041 | 31.575702 → 31.353189 (-0.70%)
+local/cuda | 1.397253 → 0.083418 | 3.482086 → 0.583498 | 31.622984 → 31.196199 (-1.35%)
+nfs/meta-sim-nt | 5.046613 → 7.834172 | 14.288415 → 26.288595 | 64.536572 → 55.191379 (-14.48%)
+nfs/cuda | 2.958524 → 2.034676 | 5.856828 → 8.526048 | 62.078438 → 59.469813 (-4.20%)
+
+结果边界：本地两配置的 save IQR/极差均下降。NFS Meta+sim 的 IQR 与极差均扩大，GPU 的 IQR 下降但极差扩大；不能宣称 NFS 保存波动或对齐问题已解决。四组 payload pwrite 中位数均低于历史值，未观察到中位数上升，但跨时段对照不能排除个别调用的资源争用，也不能把全部降幅归因于提前 patch。
+残余尾部：NFS r3 Meta+sim 的 patch 总时长为 1.796005 s，主要来自一次 4-byte pwrite（1.790859 s）；见 remaining-patch-evidence.json。正式 7B 关闭探针，不能从持续时间判定这次等待是否伴随物理读。1B eager 兼容性探针的 1,005 次 patch 前全部页驻留，写线程 read_bytes 无增长；该探针结果不外推到 7B。
+
+Meta+sim − GPU 配对差（单位秒，中位数 [95% bootstrap CI]）：
+位置/指标 | 旧十对 | 新五对
+local/save | -0.330002 [-1.693777, +0.177909] | -0.337527 [-0.579155, +0.624652]
+local/pwrite | -0.119043 [-0.223004, +0.029017] | +0.034450 [-0.309189, +0.388621]
+nfs/save | -0.758730 [-4.461218, +1.627133] | -3.077615 [-13.370538, +6.671851]
+nfs/pwrite | +4.049737 [-6.918100, +5.412127] | -3.022610 [-15.780012, +6.973617]
+
+新五对的配对均值差 [95% CI]：
+local/save：-0.139608 [-0.461641, +0.258995]
+local/pwrite：+0.051883 [-0.178263, +0.282029]
+nfs/save：-2.699976 [-8.767039, +2.772065]
+nfs/pwrite：-3.107848 [-10.210054, +2.975126]
+按 location/repeat 配对，在完整对上有放回重采样 50,000 次，seed=20261028，百分位 95% CI；所有成功测量均纳入。中位数和均值、秒数和逐对百分差均见 summary.json。新数据只有五对，CI 为描述性区间；旧十次是历史对照，时段与写回状态不同，不能将跨批次 pwrite 变化全部归因于代码。
+测量与绘图从完整 DCP API 窗口扣除全部 fsync 区间的并集；payload pwrite 与 patch 各自精确求区间并集且核验互不重叠。未采用旧脚本的最大 pre-flush gap 作为边界，因为 eager 会在过程中产生 flush。
+
+图：7b-nfs-save-no-fsync.png / .pdf，五对全部展示，红色竖线标出每组 patch 起点，横线标出组内跨度；横轴与保存总时长均删除全部 fsync，plot-evidence.json 核验字节量与 339 组 patch。图中小于 1 ms 的 pwrite 间隙仅为显示而合并，指标使用精确区间。
+
+文件：生产代码 metasl/gdt_storage.py；回归测试 tests/test_gdtensor_io.py；本目录保留 run_validation.py、resume_measurements.py、finish_validation.py、analyze.py、make_report.py、原始 traces、JSON 汇总、诊断、清理记录及最终源码快照。
+检查：gdtensor 存储/CPU/CUDA/trace/探针测试；早期沙箱 Gloo 地址解析失败的记录保留。首次完整运行的 341 项通过，新增测试对空 ZIP descriptor 的次数误写导致三项失败，修正为四次后这三项通过。最终完整重跑 344 passed，见 tests-final.log/XML；Ruff 见 ruff-final.log。
+首个字节验证尝试误带 save-only --writer-limit 到 native-load，被 CLI 拒绝，保存与清理记录保留在 identity-load-cli-attempt；修正验证命令后从新目录完整重跑，未丢弃正式重复测量。
+分析初次读取 native backend 字段时误用了 rank 报告；修正为 supervisor summary 后重做分析，测量和已通过测试没有重跑。失败日志保留在 analysis-attempt-rank-schema.log。
+一次 model-capacity 中断使 runner 退出：原 8 次完整保存逐文件哈希保留，仅删除 local-r3-meta-sim-nt 的 partial checkpoint 并归档其日志；从该 case 继续剩余 12 次，没有重跑或替换已完成样本。resume-audit.json 与 final-audit.json 核验保留文件不变。五对横跨中断前后两个时段，每对的两配置均在同一时段完成；CI 仍为描述性结果。
+全部 GPU 操作串行；测试与测量不重叠。没有 git 操作，没有修改早前运行目录的文件内容、NFS 配置或系统设置；测量采用原有 sync+文件级 fadvise 和 idle 策略。
+清理与环境：全部本次 local/NFS checkpoint root 已删除；final-audit.json 核验 metasl 源码在测量期间不变、vm.dirty_* 与 mounts 不变；cleanup-verification.json 记录最终 GPU 与实验锁、残留文件检查。
